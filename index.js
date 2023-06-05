@@ -90,14 +90,19 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, readmeContent) {
-    fs.writeFile(fileName, readmeContent, (err) => {
+    const folderPath = './Generated';
+    if (!fs.existsSync(folderPath)) {
+        fs.mkdirSync(folderPath, { recursive: true });
+      }
+    
+      fs.writeFile(`${folderPath}/${fileName}`, readmeContent, (err) => {
         if (err) {
-            console.log(err);
-            return;
+          console.log(err);
+          return;
         }
         console.log("README File Generated Successfully!");
-    });
-}
+      });
+    }
 
 // TODO: Create a function to initialize app
 function init() {
