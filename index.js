@@ -205,10 +205,10 @@ ${answers.gitUse}
 
 
     
-${images.length > 0 ? '## Images\n' + images.map((images) => `- ${images.description}: ![${images.description}](${images.url})`).join('\n') + '\n' : ''}
+${images.length > 0 ? '## Images\n' + images.map((image) => `${image.description}:\n![${image.description}](${image.url})`).join('\n\n') + '\n' : ''}
 
 
-    
+
 ${answers.gitContribute ? `## Contributing\n${answers.gitContribute}\n` : ""}
 
 
