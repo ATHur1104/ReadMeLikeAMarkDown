@@ -23,13 +23,14 @@ To use open up the terminal where the files are located. Then type "node index.j
 
     
 ## Images
+
 App In Use:
 
-![App In Use]("./READMEAssets/InUse.jpg")
+![App In Use](./READMEAssets/InUse.jpg)
 
 README Generated:
 
-![README Generated]("./READMEAssets/GeneratedReadMe.jpg")
+![README Generated](./READMEAssets/GeneratedReadMe.jpg)
 
 
 ## Technology
