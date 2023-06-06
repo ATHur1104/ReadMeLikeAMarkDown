@@ -211,7 +211,7 @@ ${answers.gitUse}
 
 
     
-${images.length > 0 ? '## Images\n' + images.map((image) => `${image.description}:\n![${image.description}]("./READMEAssets/${image.url}")`).join('\n\n') + '\n' : ''}
+${images.length > 0 ? '## Images\n' + images.map((image) => `${image.description}:\n![${image.description}](./READMEAssets/${image.url})`).join('\n\n') + '\n' : ''}
 
 
 
