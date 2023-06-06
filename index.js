@@ -83,7 +83,8 @@ const questions = [
     {
         name: "images",
         type: "input",
-        message: 'Please enter the description and location of the image (Example: description,url)',
+        message: 'Please enter the description and location of the image (Example: description,image01.jpeg) Place the images you would like to use in the READMEAssets folder located in the Generated Folder.',
+
         when: (answers) => answers.media === true
     },
 ];
@@ -100,7 +101,7 @@ function writeToFile(fileName, readmeContent) {
           console.log(err);
           return;
         }
-        console.log("README File Generated Successfully!");
+        console.log("README File Generated Successfully! Please go into the README File and clean up any unwanted spaces. If you have used an Image remember to paste the READMEAssets folder along with the README.md file.");
       });
     }
 
@@ -156,7 +157,7 @@ function init() {
         name: "additionalImages",
         type: "input",
         message:
-          "Please enter the description and location of the additional image (Example: description,url)",
+          "Please enter the description and location of the additional image (Example: description,image01.jpeg)",
       };
 
       const moreImages = () => {
@@ -210,7 +211,7 @@ ${answers.gitUse}
 
 
     
-${images.length > 0 ? '## Images\n' + images.map((image) => `${image.description}:\n![${image.description}](${image.url})`).join('\n\n') + '\n' : ''}
+${images.length > 0 ? '## Images\n' + images.map((image) => `${image.description}:\n![${image.description}]("./READMEAssets/${image.url}")`).join('\n\n') + '\n' : ''}
 
 
 
