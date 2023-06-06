@@ -83,7 +83,7 @@ const questions = [
     {
         name: "images",
         type: "input",
-        message: 'Please enter the description and location of the image (Example: description,image01.jpeg) Place the images you would like to use in the READMEAssets folder located in the Generated Folder.',
+        message: 'Please enter the description and location of the image (Example: description,image01.jpeg *Note that there is no space between the comma and the image filename*) Place the images you would like to use in the READMEAssets folder located in the Generated Folder.',
 
         when: (answers) => answers.media === true
     },
